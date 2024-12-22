@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div class="select-game-mode-window hide">
+            <h2 class="heading">Select game mode</h2>
+            <div class="button-group">
+                <div name="Single Player" class="mode-btn">
+                    <img width="100" height="50" src="icons/single_player_icon.svg" alt="single_player_icon"
+                        class="mode-icon">
+                    <label class="game-mode-label">Single Player</label>
+                </div>
+                <div name="Dual Player" class="mode-btn">
+                    <img width="100" height="50" src="icons/dual_player_icon.svg" alt="dual_player_icon"
+                        class="mode-icon">
+                    <label class="game-mode-label">Dual Players</label>
+                </div>
+            </div>
+            <button class="start-btn">Start</button>
+        </div>
+
+        <div class="settings-icon" title="Open settings">
+            <img src="icons/settings_icon.svg" alt="settings_icon" width="48px" height="48px">
+        </div>
+
+        <div class="settings-window">
+            <div class="close-icon" title="Close settings">&times;</div>
+            <h2 class="heading">Game Settings</h2>
+
+            <div class="settings-list">
+                <div class="setting1">
+                    <label class="setting-label">Player 1 Name: </label>
+                    <input class="input-player1-name" type="text">
+                </div>
+                <div class="setting2">
+                    <label class="setting-label">Player 2 Name: </label>
+                    <input class="input-player2-name" type="text">
+                </div>
+                <div class="setting3">
+                    <label class="setting-label">Game Mode: </label>
+                    <div class="mode-box">
+                        <div class="mode">
+                            <img src="icons/single_player_icon.svg" alt="single_player_icon" class="mode-icon">
+                            <span class="mode-name">Single Player</span>
+                        </div>
+                        <div class="mode">
+                            <img src="icons/dual_player_icon.svg" alt="dual_player_icon" class="mode-icon">
+                            <span class="mode-name">Dual Player</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting4">
+                    <label class="setting-label">Sound: </label>
+                    <div class="sound-box">
+                        <img src="icons/sound_enable_icon.svg" alt="sound_enable_icon" class="sound-icon">
+                        <img src="icons/sound_disable_icon.svg" alt="sound_disable_icon" class="sound-icon">
+                        <label class="sound-status">Sound: <span>Enable</span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="save-btn">Save</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div class="game-staus-header">
+            </div>
+            <div class="game-grid">
+                <div name="box1" class="grid-box"></div>
+                <div name="box2" class="grid-box"></div>
+                <div name="box3" class="grid-box"></div>
+                <div name="box4" class="grid-box"></div>
+                <div name="box5" class="grid-box"></div>
+                <div name="box6" class="grid-box"></div>
+                <div name="box7" class="grid-box"></div>
+                <div name="box8" class="grid-box"></div>
+                <div name="box9" class="grid-box"></div>
+            </div>
+            <div class="game-status-footer">
+                <div class="player-info">
+                    <img id="player1-icon" class="player-icon" src="icons/player1_icon.svg" width="100px"
+                        alt="player1-icon">
+                    <label id="player1-name">Player 1 - X</label>
+                </div>
+
+                <div class="mid-label">VS</div>
+
+                <div class="player-info">
+                    <img id="player2-icon" class="player-icon" src="icons/player2_icon.svg" width="100px"
+                        alt="player2-icon">
+                    <label id="player2-name">Player 2 - O</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="match-status-window hide">
+            <p class="win-msg"></p>
+            <button>Restart</button>
+        </div>
+
+        <div id="overlay"></div>
+    </main>
+</body>
+
+</html>
